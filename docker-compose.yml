@@ -1,0 +1,35 @@
+version: '2.3'
+
+networks:
+  dionaea_local:
+
+services:
+
+# Dionaea service
+  dionaea:
+    build: .
+    container_name: dionaea
+    stdin_open: true
+    tty: true
+    restart: always
+    networks:
+     - dionaea_local
+    ports:
+     - "20:20"
+     - "21:21"
+     - "42:42"
+     - "69:69/udp"
+     - "81:81"
+     - "135:135"
+     - "443:443"
+     - "445:445"
+     - "1433:1433"
+     - "1723:1723"
+     - "1883:1883"
+     - "3306:3306"
+     - "5060:5060"
+     - "5060:5060/udp"
+     - "5061:5061"
+     - "27017:27017"
+    image: "ghcr.io/telekom-security/dionaea:2006"
+
