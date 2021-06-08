@@ -1,24 +1,19 @@
 FROM debian:buster-slim
 ENV DEBIAN_FRONTEND noninteractive
-#
-# Include dist
-ADD dist/ /root/dist/
-#
 # Install dependencies and packages
 RUN apt-get update && \
     apt-get install netselect-apt -y && \
     netselect-apt && \
     mv sources.list /etc/apt/ && \
-    apt-get update -y && \
     apt-get dist-upgrade -y && \
-    apt-get install -y --no-install-recommends \
+    apt-get install -y --no-install-recommends && \
 	build-essential \
 	ca-certificates \
 	check \
 	cmake \
 	cython3 \
 	git \
-    libcap2-bin \
+        libcap2-bin \
 	libcurl4-openssl-dev \
 	libemu-dev \
 	libev-dev \
@@ -36,12 +31,12 @@ RUN apt-get update && \
 	python3-boto3 \
 	python3-bson \
 	python3-yaml \
-	fonts-liberation && \
+	fonts-liberation 
 #
 # Get and install dionaea
     # Latest master is unstable, SIP causes crashing
     #git clone --depth=1 https://github.com/dinotools/dionaea -b 0.11.0 /root/dionaea/ && \
-    git clone --depth=1 https://github.com/dinotools/dionaea  /root/dionaea/ && \
+RUN git clone --depth=1 https://github.com/dinotools/dionaea  /root/dionaea/ && \
     cd /root/dionaea && \
     git checkout 1426750b9fd09c5bfeae74d506237333cd8505e2 && \
     mkdir build && \
