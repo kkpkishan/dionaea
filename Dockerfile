@@ -3,7 +3,6 @@ ENV DEBIAN_FRONTEND noninteractive
 # Install dependencies and packages
 RUN apt-get update && \
     apt-get install netselect-apt -y && \
-    netselect-apt && \
     mv sources.list /etc/apt/ && \
     apt-get dist-upgrade -y && \
     apt-get install -y --no-install-recommends && \
