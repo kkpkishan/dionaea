@@ -50,3 +50,29 @@ dionaea can offer services via tcp/udp and tls for IPv4 and IPv6, and can apply 
 -p 11211:11211
 kkpkishan/dionaea:v1
       </p>
+<table width="100%">
+    <tr>
+        <th align="left" colspan="2"><h4><a href="https://github.com/kkpkishan/dionaea.git"> Dionaea CF </a></h4></th>
+    </tr>
+    <tr>
+        <td width="100%" valign="top">
+           <p>Creates an entire Dionaea from scratch for Lab or Permanent.</p>
+           <ol>
+            <tr>
+                      <td nowrap  valign="top">
+            <table>
+                <tr>
+                    <th align="left">Launch</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CloudFormation</p>
+                        <a href="https://console.aws.amazon.com/cloudformation/home?#/stacks/new?&templateURL=https://raw.githubusercontent.com/dionaea/dionaea.yaml" target="_blank"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr> 
+    </ol>
+ </table>
+
