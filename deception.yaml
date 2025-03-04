@@ -38,7 +38,7 @@ Parameters:
     ConstraintDescription: must contain only alphanumeric characters.
     Description: The  ElasticsearchPassword admin account password
     MaxLength: '41'
-    MinLength: '8'
+    MinLength: '3'
     NoEcho: 'true'
     Type: String
   ElasticsearchUsername:
